@@ -13,7 +13,7 @@ const BotonesHomeContainer = () => {
     };
 
     const listadoDeRecetasEventHandler = (event) => {
-        alert('Proximamente');
+        navigate('/Recetas');
     };
 
     const planificarEventHandler = (event) => {

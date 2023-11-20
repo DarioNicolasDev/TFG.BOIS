@@ -28,7 +28,6 @@ const Perfil = () => {
 
     return (
         <>
-            <BotonBack color={"Blanco"} />
             <Header titulo={"Perfil"} />
             <div className='perfilBody'>
                 <h2>{usuario.nombreUsuario}</h2>

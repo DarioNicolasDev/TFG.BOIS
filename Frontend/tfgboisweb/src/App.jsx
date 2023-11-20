@@ -13,6 +13,7 @@ import Layout from './components/Layout/Layout';
 import { APIProvider } from './contexts/ApiContext';
 import Cocinar from './pages/Cocinar/Cocinar';
 import RecetaPasos from './pages/RecetaPasos/RecetaPasos';
+import RecetasPage from './pages/Receta/RecetasPage';
 
 const AuthHome = withAuth(Home);
 const AuthQuieroCocinar = withAuth(QuieroCocinar);
@@ -22,6 +23,7 @@ const AuthReceta = withAuth(Receta);
 const AuthRecetaDetalle = withAuth(RecetaDetallePage);
 const AuthCocinar = withAuth(Cocinar);
 const AuthRecetaPasos = withAuth(RecetaPasos);
+const AuthRecetasPage = withAuth(RecetasPage);
 
 function App() {
 
@@ -43,6 +45,7 @@ function App() {
                 <Route path="/perfil" element={<AuthPerfil />} />
                 <Route path="/Cocinar" element={<AuthCocinar />} />
                 <Route path="/RecetaPasos" element={<AuthRecetaPasos />} />
+                <Route path="/Recetas" element={< AuthRecetasPage />} />
 
               </Routes>
             </Layout>

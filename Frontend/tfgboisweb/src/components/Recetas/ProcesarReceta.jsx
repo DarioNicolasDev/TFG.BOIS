@@ -10,14 +10,19 @@ const ProcesarReceta = () => {
         naviate("/");
     };
 
-    return (
+    return (<>
         <div className='procesandoReceta'>
             {/* <h2>Estamos creando tu receta... ¡Te avisaremos cuando esté lista!</h2> */}
             {/* <Boton claseCss={"boton principal"} titulo={"Ir al Inicio"} onclickEventHandler={volverEventHandler} /> */}
             <img className='creandoReceta' src="./images/CreandoReceta.svg" alt="" />
             <img className='inteligenciaArtificial' src="./images/InteligenciaArtificialProcesando.svg" alt="" />
-            <Link className='procesandoReceta-link' to={"/"}>Cancelar</Link>
+            <h2>Estamos preparando tu receta, no te vayas.</h2>
+            <Link className='procesandoReceta-link' to={"/"}>Volver al Inicio</Link>
         </div>
+
+    </>
+
+
     )
 }
 

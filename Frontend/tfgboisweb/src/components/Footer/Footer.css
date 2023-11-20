@@ -8,7 +8,7 @@ nav {
     flex-direction: column;
     justify-content: start;
     padding-top: 5px;
-    z-index: 100;
+    z-index: 200;
 }
 
 nav ol {
@@ -30,6 +30,7 @@ nav ol li {
     flex: 1 1 0;
     width: 0;
     cursor: pointer;
+
 }
 
 nav ol li a {
@@ -40,10 +41,13 @@ nav ol li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 35%;
 }
 
 nav ol li img {
     width: 25px;
+
+    padding-top: 5px;
 }
 
 
@@ -52,4 +56,18 @@ nav ol li img {
     height: 60px;
     width: 60px;
     border-radius: 100px;
+}
+
+.nav-activo {
+    border-top: 3px solid #fff !important;
+
+}
+
+.nav-opcion {
+    border-top: 3px solid rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

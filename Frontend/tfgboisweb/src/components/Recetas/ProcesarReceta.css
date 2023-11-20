@@ -23,13 +23,13 @@
 .procesandoReceta-link {
     font-size: 21px;
     position: fixed;
-    bottom: 25;
+    bottom: 25px;
 }
 
 .procesandoReceta h2 {
-    background-color: black;
+    background-color: #094361;
     z-index: 100;
-    color: white;
+    color: #F2F2F2;
     padding: 15px 85px;
     border-radius: 15px;
 }

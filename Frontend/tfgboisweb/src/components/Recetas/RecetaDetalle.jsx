@@ -1,5 +1,5 @@
 
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Header from '../Header/Header';
 import BotonBack from '../BotonBack/BotonBack';
 import './RecetaDetalle.css'
@@ -7,6 +7,16 @@ import Boton from '../Boton/Boton'
 
 
 const RecetaDetalle = ({ receta, cocinarEventHandler }) => {
+    const [favoritoActivo, setFavoritoActivo] = useState(false);
+    const [favoritoImage, setFavoritoImage] = useState('Favoritos-vacio.svg');
+    const favoritosEventHandler = () => {
+        if (favoritoActivo) {
+            setFavoritoImage('Favoritos-lleno.svg')
+        } else {
+            setFavoritoImage('Favoritos-vacio.svg')
+        }
+        setFavoritoActivo(!favoritoActivo);
+    }
 
     if (receta) {
         return (
@@ -25,7 +35,7 @@ const RecetaDetalle = ({ receta, cocinarEventHandler }) => {
 
                     </div>
                     <div className='botonesContainer'>
-                        <img src='./images/Favoritos-vacio.svg' />
+                        <img onClick={favoritosEventHandler} src={`./images/${favoritoImage}`} />
                         <Boton onclickEventHandler={cocinarEventHandler} claseCss={"boton principal"} titulo={"¡A cocinar!"} />
                     </div>
 

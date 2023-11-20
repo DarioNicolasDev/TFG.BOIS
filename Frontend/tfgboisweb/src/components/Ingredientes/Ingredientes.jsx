@@ -3,7 +3,7 @@ import './ingredientes.css'
 
 const Ingredientes = ({ ingredientes, ingredienteSeleccionadoEventHandler }) => {
     return (
-        <div >
+        <div>
             <h3>Ingredientes</h3>
             <div className='ingredienteContainer' >
                 {ingredientes.map((ingrediente) => (

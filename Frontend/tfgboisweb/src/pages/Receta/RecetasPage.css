@@ -1,0 +1,17 @@
+.recetasPageContainer {
+    margin-top: 82px;
+}
+
+.recetasContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0px 35px;
+}
+
+@media screen and (max-width: 600px) {
+    .recetasContainer {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 0px 20px;
+    }
+}

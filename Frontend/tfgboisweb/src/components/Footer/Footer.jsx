@@ -2,35 +2,44 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 
-const Footer = ({ visible }) => {
+const Footer = ({ visible, actual }) => {
+
     if (visible) {
         return (
 
             <nav>
                 <ol>
-                    <li>
+                    <li >
                         <Link to="/">
-                            <img src='./images/Home.svg' />
-                            <span>Inicio</span>
+                            <div className={actual === 'Home' ? 'nav-opcion nav-activo' : 'nav-opcion'}>
+                                <img src='./images/Home.svg' />
+                                <span>Inicio</span>
+                            </div>
                         </Link>
 
                     </li>
-                    <li>
+                    <li >
                         <Link to="/favoritos">
-                            <img src='./images/Favoritos.svg' />
-                            <span>Favoritos</span>
+                            <div className={actual === 'Favoritos' ? 'nav-opcion nav-activo' : 'nav-opcion'}>
+                                <img src='./images/Favoritos.svg' />
+                                <span>Favoritos</span>
+                            </div>
+
                         </Link>
 
                     </li>
-                    <li>
+                    <li >
                         <Link to="/perfil">
-                            <img src='./images/Perfil.svg' />
-                            <span>Perfil</span>
+                            <div className={actual === 'Perfil' ? 'nav-opcion nav-activo' : 'nav-opcion'}>
+                                <img src='./images/Perfil.svg' />
+                                <span>Perfil</span>
+                            </div>
+
                         </Link>
                     </li>
 
                 </ol>
-            </nav>
+            </nav >
         )
     } else {
         return (<></>)

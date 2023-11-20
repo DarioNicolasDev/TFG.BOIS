@@ -3,7 +3,7 @@
     flex-direction: column;
     margin: auto;
     width: 80%;
-    height: 60dvh;
+    height: 50dvh;
     overflow: hidden;
     overflow-y: scroll;
 }

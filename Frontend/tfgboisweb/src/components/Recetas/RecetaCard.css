@@ -1,0 +1,47 @@
+.recetaCard.recetasCard-mediano {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recetaCard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recetaCard-container .boton {
+    width: 50% !important;
+}
+
+.recetaCard-fila {
+    display: flex;
+
+}
+
+.recetaCard-fila.columnar {
+    flex-direction: column;
+}
+
+.recetaCard-estrella {
+    width: 20px;
+
+}
+
+.recetaCard-fila span {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.recetaCard-header-favorito {
+    width: 25px;
+    cursor: pointer;
+}
+
+.recetaCard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

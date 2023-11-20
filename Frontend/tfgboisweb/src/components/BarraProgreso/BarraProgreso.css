@@ -1,0 +1,23 @@
+.barraProgreso {
+    display: flex;
+    border: 2px solid #094361;
+    border-radius: 5px;
+    height: 10px;
+    margin: 5px 10px;
+}
+
+.barraProgreso span {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    margin-right: 0 !important;
+}
+
+.progreso-completo {
+    background-color: #094361;
+}
+
+.progreso-vacio {
+    background-color: #f2f2f2;
+}

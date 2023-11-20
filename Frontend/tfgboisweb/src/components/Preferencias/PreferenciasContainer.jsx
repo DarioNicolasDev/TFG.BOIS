@@ -11,7 +11,9 @@ const PreferenciasContainer = ({ usuario, mostrarBoton, actualizarPreferenciasEv
     const [error, setError] = useState(null);
     const [usuarioPreferencias, setUsuarioPreferencias] = useState(usuario.usuarioPreferencias);
     const [preferenciasUsuario, setPreferenciasUsuario] = useState([]);
+    const [preferenciasUsuarioOriginales, setPreferenciasUsuarioOriginales] = useState([]);
     const [estaCargando, setEstaCargando] = useState(false);
+    const [hayCambios, setHayCambios] = useState(false);
 
 
     const guardarEventHandler = async (event) => {
@@ -45,8 +47,57 @@ const PreferenciasContainer = ({ usuario, mostrarBoton, actualizarPreferenciasEv
         actualizarPreferenciasUsuario([]);
     };
 
+
+    useEffect(() => {
+        const compararPreferencias = () => {
+            if (preferenciasUsuarioOriginales.length !== preferenciasUsuario.length) {
+                setHayCambios(true);
+                return;
+            } else {
+                // Clona y elimina 'tipoPreferencia' de cada objeto
+                const cloneArray1 = preferenciasUsuarioOriginales.map(obj => {
+                    const clone = { ...obj };
+                    delete clone.tipoPreferencia;
+                    return clone;
+                });
+
+                const cloneArray2 = preferenciasUsuario.map(obj => {
+                    const clone = { ...obj };
+                    delete clone.tipoPreferencia;
+                    return clone;
+                });
+
+                // Convierte a string y ordena
+                const sortedArray1 = cloneArray1.map(obj => JSON.stringify(obj)).sort();
+                const sortedArray2 = cloneArray2.map(obj => JSON.stringify(obj)).sort();
+
+                console.log(sortedArray1);
+                console.log(sortedArray2);
+
+                // Compara los arrays
+                for (let i = 0; i < sortedArray1.length; i++) {
+                    if (sortedArray1[i] !== sortedArray2[i]) {
+                        setHayCambios(true);
+                        console.log("hay cambios");
+                        console.log(sortedArray1[i]);
+                        console.log(sortedArray2[i]);
+                        return;
+                    }
+                }
+            }
+            setHayCambios(false);
+        }
+        compararPreferencias();
+
+    }, [preferenciasUsuario]);
+
+
+
+
+
+
     const onToggle = (event) => {
-        const preferenciaID = Number(event.target.id); // Asegurándonos de que es un número si los IDs son numéricos
+        const preferenciaID = Number(event.target.id);
         setPreferenciasUsuario((prevPreferenciasUsuario) => {
             const preferenciaIndex = prevPreferenciasUsuario.findIndex(item => item.id === preferenciaID);
 
@@ -59,16 +110,18 @@ const PreferenciasContainer = ({ usuario, mostrarBoton, actualizarPreferenciasEv
                 return [...prevPreferenciasUsuario, preferencia];
             }
         });
-        actualizarPreferenciasEventHandler(event);
+        if (actualizarPreferenciasEventHandler) {
+            actualizarPreferenciasEventHandler(event);
+        }
     };
 
     useEffect(() => {
         if (usuarioPreferencias && usuarioPreferencias.length > 0) {
-            const aux = [];
-            usuarioPreferencias.forEach(item => {
-                aux.push(item.preferencia);
-            });
+            const aux = usuarioPreferencias.map(item => item.preferencia);
+            const aux2 = usuarioPreferencias.map(item => item.preferencia);
+            setPreferenciasUsuarioOriginales(aux2);
             setPreferenciasUsuario(aux);
+
         }
     }, []);
 
@@ -112,9 +165,9 @@ const PreferenciasContainer = ({ usuario, mostrarBoton, actualizarPreferenciasEv
             }
 
             {
-                mostrarBoton
+                mostrarBoton && hayCambios
                     ? (
-                        <Boton isDisable={estaCargando} claseCss={"boton principal"} titulo={"Guardar cambios"} tituloDeshabilitado={"Guardando..."} onclickEventHandler={guardarEventHandler} />
+                        <Boton isDisable={estaCargando} claseCss={"boton principal"} titulo={"Guardar"} tituloDeshabilitado={"Guardando..."} onclickEventHandler={guardarEventHandler} />
 
                     )
                     : (<></>)

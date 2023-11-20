@@ -18,22 +18,39 @@ const Receta = () => {
     const usuarioPreferencias = usuarioLogueado().usuarioPreferencias;
     const [apiRequest, setApiRequest] = useState({ ingredientes: [], preferencias: [] });
 
+    const [isMounted, setIsMounted] = useState(true);
+
+    useEffect(() => {
+        // Al montarse el componente
+        setIsMounted(true);
+
+        // Al desmontarse el componente
+        return () => {
+            setIsMounted(false);
+        };
+    }, []);
+
     const popUpButtonClickEventHandler = async () => {
         try {
             setMostrarPopUp(false);
             const data = await obtenerRecetasPorIngredientesIA(apiRequest);
             setApiData(data);
 
-            if (data && data.data && data.data.length > 0) {
-                navigate('/RecetaDetalle', { state: { receta: data.data[0] } });
+            if (isMounted && data && data.data && data.data.length > 0) {
+                if (location.pathname === '/receta' || location.pathname === '/RecetaDetalle') {
+                    console.log("Estoy por navigate  " + location.pathname);
+                    navigate('/RecetaDetalle', { state: { receta: data.data[0] } });
+                }
             }
-            if (data && data.detail) {
+            if (isMounted && data && data.detail) {
                 setMensajePopUp(data.detail);
                 setMostrarPopUp(true);
             }
         } catch (error) {
-            setError(error);
-            alert(error.message);
+            if (isMounted) {
+                setError(error);
+                alert(error.message);
+            }
         }
 
     };
