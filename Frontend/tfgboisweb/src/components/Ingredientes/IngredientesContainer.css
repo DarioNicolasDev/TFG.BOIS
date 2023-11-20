@@ -1,0 +1,72 @@
+.ingredientesContainer {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chipsGeneral {
+    width: 90%;
+    margin: 15px 10px;
+}
+
+.listContainer {
+    background-color: #fff;
+    border: 0px solid;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #76717143;
+    width: 80%;
+    min-height: 500px;
+    padding: 25px;
+
+}
+
+.listContainer ul {
+    padding: 25px 0;
+
+}
+
+.listItems {
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+    min-height: 480px;
+    padding-top: 25px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listItems li {
+    list-style-type: none;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #76717143;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    font-weight: 600;
+}
+
+
+
+
+.listItems li .item {
+    flex: 3 1 0;
+    width: 0;
+
+
+}
+
+
+.listItems li .item.interruptor {
+    text-align: right;
+    flex: 1 1 0
+}
+
+.listItems li .item p {
+    font-size: 12px;
+    font-weight: 400;
+}

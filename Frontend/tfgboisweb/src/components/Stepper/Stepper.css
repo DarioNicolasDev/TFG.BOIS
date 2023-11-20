@@ -1,0 +1,66 @@
+.stepper-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+    height: 80px;
+}
+
+.step {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.step-line {
+
+    position: absolute;
+    top: 15px;
+    transform: translateY(-50%);
+    left: 16.5%;
+    /* Ajusta según el tamaño del paso y el margen */
+    right: 16.5%;
+    /* Igual que left para simetría */
+    border-bottom: 1px solid #B22020;
+}
+
+.step-title {
+    flex-grow: 1;
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.step-title.active {
+    flex-grow: 1;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #B22020;
+
+}
+
+
+.step.active {
+    background-color: #B22020;
+    color: white;
+}
+
+.step-title {
+    margin-top: 10px;
+}

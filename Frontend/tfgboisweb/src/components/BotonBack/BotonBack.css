@@ -1,0 +1,10 @@
+.backArrow {
+    position: fixed;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    top: 0;
+    z-index: 100;
+}

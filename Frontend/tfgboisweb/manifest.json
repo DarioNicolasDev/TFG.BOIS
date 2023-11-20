@@ -1,0 +1,20 @@
+{
+  "short_name": "Cocinar en casa",
+  "name": "Cocinar en casa",
+  "icons": [
+    {
+      "src": "icono-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icono-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#B22020",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,32 @@
+.botonQuieroCocinar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.botonQuieroCocinar img {
+    width: 60px;
+    border-radius: 100px;
+    padding: 30px;
+    transition: 200ms;
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.botonQuieroCocinar img:hover {
+    box-shadow: 5px 5px 15px #76717143;
+    transition: 200ms;
+}
+
+.botonQuieroCocinar h3 {
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    color: #B22020;
+}

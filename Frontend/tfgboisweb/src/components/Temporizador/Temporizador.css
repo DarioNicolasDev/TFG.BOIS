@@ -1,0 +1,21 @@
+.temporizador-Container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.temporizador-restante {
+    background-color: #094361;
+    color: #fff;
+    padding: 25px;
+    border-radius: 200px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.temporizador {
+    height: 150px;
+    text-align: center;
+}

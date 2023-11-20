@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background-color: #F2F2F2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #B22020;
+    color: #FFF;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 80;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+
+}
+
+.subtitulo {
+    color: #094361;
+    margin: 10px 15px;
+    margin-top: 95px;
+}
+
+.subtitulo h2,
+h3 {
+    font-size: 16px;
+    font-weight: 100;
+    margin: 0;
+}

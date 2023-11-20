@@ -1,0 +1,20 @@
+.botoneraPasos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 120px;
+}
+
+.botoneraPasos button {
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    background-color: #B22020;
+    border: none;
+    color: #f2f2f2;
+}
+
+.botoneraPasos button:active {
+    background-color: #621515;
+}

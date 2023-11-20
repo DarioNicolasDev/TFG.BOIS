@@ -1,0 +1,33 @@
+.botonHome {
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+    margin-top: 25px;
+}
+
+.botonHome:hover {
+    box-shadow: 5px 5px 15px #76717143;
+    transition: 200ms;
+}
+
+.botonHome img {
+    width: 75px;
+}
+
+.botonHome span {
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+    color: #094361;
+}
+
+.botonHome img.mediano {
+    width: 65px !important;
+}

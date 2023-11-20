@@ -1,0 +1,62 @@
+.botonContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.botonContainer.fixed {
+    position: fixed;
+    bottom: 10px;
+}
+
+.botonContainer.fixed.solid {
+    background-color: #F2F2F2;
+    padding-top: 15px;
+}
+
+.boton {
+    cursor: pointer;
+    height: 48px !important;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 21px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 5px #76717158;
+    transition: 0.2s;
+    height: 35px;
+    font-size: 16px;
+    z-index: 200;
+}
+
+.boton.principal {
+    background-color: #B22020;
+    color: #fff;
+}
+
+.boton.principal:hover {
+    background-color: #cf4c4c;
+}
+
+.boton:active {
+    box-shadow: 0px 0px 1px #767171b0;
+    transition: 0.2s;
+}
+
+.boton.principal:active {
+    background-color: #B22020;
+}
+
+.boton:disabled {
+    background-color: #9b8686;
+    color: #f4f3f3;
+    cursor: not-allowed;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .boton {
+        width: 65% !important;
+    }
+}

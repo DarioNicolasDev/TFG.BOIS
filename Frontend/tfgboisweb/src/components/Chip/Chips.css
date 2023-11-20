@@ -1,0 +1,36 @@
+.chips-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 5px;
+}
+
+.chip {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 16px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.chip.selected {
+    background-color: #4CAF50;
+
+}
+
+.chip.principal {
+    border: 2px solid #094361;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.chip.secundario {
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: #094361 !important;
+    color: #f2f2f2;
+}

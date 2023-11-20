@@ -1,0 +1,78 @@
+.formContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffffffb8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 15px;
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    .imgLogin {
+        height: 50vh;
+    }
+}
+
+
+form input {
+    height: 35px;
+    width: 80%;
+    border: solid 1px #d9d9d9;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 21px;
+    padding-left: 25px;
+    padding-right: 5px;
+    color: #353535;
+}
+
+form button {
+    height: 50px;
+    width: 60%;
+    border-radius: 10px;
+    background-color: #B22020;
+    color: #fff;
+    font-size: 21px;
+    border: solid 1px #d9d9d9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form a:link {
+    color: #094361;
+    font-weight: 600;
+}
+
+.imgLogin {
+    position: absolute;
+    z-index: -1;
+    left: -150px;
+    opacity: 0.15;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+form h3 {
+    color: #094361;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

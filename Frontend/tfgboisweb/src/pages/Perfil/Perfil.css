@@ -1,0 +1,20 @@
+.perfilBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 80px;
+}
+
+.perfilBody h2 {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.perfilBody h3 {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
